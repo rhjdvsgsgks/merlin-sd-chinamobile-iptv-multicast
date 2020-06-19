@@ -14,10 +14,12 @@
 
 ## 使用方法
 
-在光猫中记下所有 vlanid ，删除所有绑定配置，新建一个配置， bridge (桥接)，业务模式 Internet ，vlan transport (穿透)，关闭 dhcp
+在光猫中记下所有 vlanid ，删除所有绑定配置，新建一个配置， bridge (桥接)，业务模式 Internet ，vlan transport (穿透)，关闭 dhcp ，什么端口都不绑定
+
+光猫随便找个 lan 口接上路由器(建议 lan1 ，其他接口可能偷工减料不是千兆)， iptv 机顶盒随便怎么接无论有限无线只要接上路由器并在 lan 段即可
 
 路由器中， lan 设置， iptv ，互联网填之前光猫中 internet 的 vlanid ， wan 设置正常拨号，请勿开启“双连接”
 
 将 `iptvmilticast.sh` `iptvmilticastudhcpc.sh` 放入 `/jffs/scripts` 并设置权限，在 `iptvmilticast.sh` 中设置 iptv 的 vlanid (即光猫中 other 项的 vlanid ) 、 iptv 机顶盒的 mac 、 iptv 机顶盒使用 ipoe 方式连接时 dhcp 握手中 option60 项的值
 
-将 `/jffs/scripts/iptvmilticast.sh` 添加到 `/jffs/scripts/nat-start` 即可
+将 `/jffs/scripts/iptvmilticast.sh` 添加到 `/jffs/scripts/nat-start` 重启即可
