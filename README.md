@@ -4,6 +4,14 @@
 
 在破解移动送的 iptv 机顶盒时发现通过 ipoe+iptv 帐号居然可以访问非 iptv 的网站，于是就有了这个脚本
 
+## 效果
+
+使用后(上)/使用前(下)
+
+![](https://raw.githubusercontent.com/rhjdvsgsgks/merlin-sd-chinamobile-iptv-multicast/master/Screenshot.png)
+
+可以看出下行增加了150m上行增加了50m
+
 ## 使用方法
 
 在光猫中记下所有 vlanid ，删除所有绑定配置，新建一个配置， bridge (桥接)，业务模式 Internet ，vlan transport (穿透)，关闭 dhcp
