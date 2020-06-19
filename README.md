@@ -20,4 +20,4 @@
 
 将 `iptvmilticast.sh` `iptvmilticastudhcpc.sh` 放入 `/jffs/scripts` 并设置权限，在 `iptvmilticast.sh` 中设置 iptv 的 vlanid (即光猫中 other 项的 vlanid ) 、 iptv 机顶盒的 mac 、 iptv 机顶盒使用 ipoe 方式连接时 dhcp 握手中 option60 项的值
 
-执行 `iptvmilticast.sh` 即可
+将 `/jffs/scripts/iptvmilticast.sh` 添加到 `/jffs/scripts/nat-start` 即可
