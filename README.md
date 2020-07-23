@@ -23,3 +23,11 @@
 将 `iptvmilticast.sh` `iptvmilticastudhcpc.sh` 放入 `/jffs/scripts` 并设置权限，在 `iptvmilticast.sh` 中设置 iptv 的 vlanid (即光猫中 other 项的 vlanid ) 、 iptv 机顶盒的 mac 、 iptv 机顶盒使用 ipoe 方式连接时 dhcp 握手中 option60 项的值
 
 将 `/jffs/scripts/iptvmilticast.sh` 添加到 `/jffs/scripts/nat-start` 重启即可
+
+## 已知 bug
+
+抓包获取的 option60 有有效期，过期后无法获取新ip
+
+# TODO
+
+- [ ] 自动抓取来自机顶盒的 dhcp 包提取并更新 option60
